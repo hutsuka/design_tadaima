@@ -1,0 +1,828 @@
+body {
+
+    overflow: auto;
+    font-family: "Noto Sans JP", sans-serif;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 100vw;
+}
+
+
+.background {
+    height: auto;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    background-color: #e0e0e0;
+
+
+}
+
+.background_texts img {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: block;
+    z-index: -1;
+}
+
+
+.background_image {
+    clip-path: ellipse(50px 50px at 0px 0px);
+    transition: all 0.08s;
+}
+
+.background_image img {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: block;
+}
+
+.bg_set {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+
+
+.main_content {
+    margin: 0 15px;
+}
+
+.text_wrapper {
+    margin: 0 15px;
+}
+
+.center {
+    background-color: #e6dfdf;
+    top: 0;
+    width: 480px;
+    height: 100%;
+    border-right: #a3a3a3 1px solid;
+    border-left: #a3a3a3 1px solid;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .background {
+        display: none;
+    }
+
+    .center {
+        width: 100%;
+    }
+}
+
+.center_image_text {
+    position: relative;
+}
+
+.center_image img {
+    object-fit: cover;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    height: 30px;
+    margin-top: -1px;
+    width: auto;
+}
+
+.gnav_list {
+
+    display: flex;
+    justify-content: space-between;
+    margin-left: 170px;
+}
+
+.gnav_item {
+    color: #ffffff;
+    margin-top: 10px;
+    padding: 6px 10px;
+
+    border: #d8d7d7 1px solid;
+    text-align: center;
+    background-color: #5e5c5c7c;
+
+
+}
+
+.gnav_item:nth-child(2),
+.gnav_item:nth-child(3) {
+    margin-left: 10px;
+}
+
+.gnav_item:hover {
+    background-color: #f5f3f3;
+    color: #000000;
+}
+
+@media (max-width: 480px) {
+    .gnav_list {
+        margin-left: 80px;
+    }
+
+    .gnav_item:nth-child(2),
+    .gnav_item:nth-child(3) {
+        margin-left: 0px;
+    }
+}
+
+
+
+
+
+.top_title {
+    position: absolute;
+    line-height: 1.4em;
+    font-size: 1.8rem;
+    font-weight: 800;
+    top: 560px;
+    padding: 15px 20px 0 25px;
+    background-color: #e6dfdf;
+}
+
+@media (max-width: 480px) {
+    .top_title {
+        top: 300px;
+        padding: 50px 20px;
+    }
+}
+
+.main_text {
+    margin-top: 130px;
+    font-weight: 600;
+    line-height: 2.5em;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 480px) {
+    .main_text {
+        font-feature-settings: "palt" 1;
+        margin-top: 30px;
+
+    }
+}
+
+.contents_title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #e9e7e7;
+    padding: 50px 0 20px 0;
+}
+
+/* main_schedule */
+.schedule_contents {
+    background-color: #313131;
+    height: 600px;
+    box-shadow: 5px 10px 8px 0 rgba(134, 133, 133, 0.5);
+
+}
+
+.schedule_slider {
+    height: 240px;
+    width: 420px;
+    margin: 40px calc(50% - 210px);
+    background-color: #DB9732;
+    box-shadow: 1px 4px 6px 0 rgba(48, 48, 48, 0.5);
+}
+
+@media (max-width: 450px) {
+    .schedule_slider {
+        width: 360px;
+        margin: 40px calc(50% - 180px);
+    }
+
+}
+
+
+.date_time {
+    color: #e0e0e0;
+    margin-top: 60px;
+
+}
+
+
+
+.year_date {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.year {
+    font-size: 20px;
+    margin-top: 6px;
+}
+
+.date {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    margin-left: 10px;
+
+}
+
+.week_time {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    display: block;
+}
+
+@media (max-width: 450px) {
+    .year {
+        font-size: 15px;
+    }
+
+    .date {
+        font-size: 36px;
+    }
+
+    .week_time {
+        font-size: 18px;
+    }
+}
+
+.middle_text {
+    margin-top: 30px;
+    font-weight: 600;
+    line-height: 2.5em;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 450px) {
+    .middle_text {
+        font-feature-settings: "palt" 1;
+    }
+}
+
+/* main_place */
+.place_contents {
+    background-color: #f7863b;
+    height: 880px;
+    box-shadow: 5px 10px 8px 0 rgba(134, 133, 133, 0.5);
+}
+
+.inner_text {
+    font-weight: 600;
+    line-height: 2rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.place_text {
+    line-height: 1.8rem;
+    margin-bottom: 30px;
+}
+
+
+.link {
+    text-align: center;
+    background-color: #e6dfdf;
+    /* padding: 10px; */
+    margin: 20px 100px;
+    border: #b38125 2px solid;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+}
+
+.link a {
+    display: block;
+    padding: 20px;
+}
+
+.access_link,
+.youtube_link {
+    border: #f7863b 2px solid;
+
+}
+
+.access_link:hover,
+.youtube_link:hover {
+    animation: accessAnimation 0.6s forwards;
+}
+
+@keyframes accessAnimation {
+    0% {
+        border: 2px solid #f7863b;
+    }
+
+    100% {
+        border: #9c4308 2px solid;
+    }
+}
+
+.access_map {
+    display: flex;
+    margin-top: 20px;
+}
+
+.access_map iframe {
+    margin: 0 auto;
+}
+
+/* main_contact */
+.contact_link {
+    border: #d1b724 2px solid;
+}
+
+.contact_link:hover {
+    animation: linkAnimation 0.6s forwards;
+}
+
+@keyframes linkAnimation {
+    0% {
+        border: 2px solid #d1b724;
+    }
+
+    100% {
+        border: #816f07 2px solid;
+    }
+}
+
+.contact_contents {
+    margin-top: 20px;
+    height: 385px;
+    background-color: #d1b724;
+    box-shadow: 5px 10px 8px 0 rgba(134, 133, 133, 0.5);
+}
+
+footer {
+    text-align: center;
+
+}
+
+.footer_title {
+    line-height: 1.4em;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-top: 140px;
+    color: #adadad;
+
+}
+
+.top_return {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #131212;
+}
+
+.black-color_return:hover {
+    animation: blackAnimation 0.2s forwards;
+}
+
+@keyframes blackAnimation {
+    0% {
+        color: #000000;
+    }
+
+    100% {
+        color: #ec4015;
+    }
+}
+
+.sc-main_return {
+    margin-top: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.sc-main_return:hover {
+    animation: returnAnimation 0.2s forwards;
+}
+
+@keyframes returnAnimation {
+    0% {
+        color: #e6e6e6;
+    }
+
+    100% {
+        color: #1f1f1f;
+    }
+}
+
+.footer_copyright {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #a3a3a3;
+    margin-top: 80px;
+    padding-bottom: 10px;
+}
+
+/* sub */
+
+.sub_main_title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 80px;
+    padding-top: 20px;
+    color: #f7863b;
+}
+
+
+/* contactフォーム */
+
+
+#contact label {
+    display: inline-block;
+    font-weight: 600;
+    margin-left: 70px;
+    margin-bottom: 5px;
+
+
+
+}
+
+
+
+
+
+input,
+textarea {
+    border: #313131 1px solid;
+    /* margin-top: 6px;
+    margin-bottom: 20px; */
+    display: block;
+    margin: 0 auto;
+    width: 328px;
+    height: 30px;
+    background-color: #ebebeb;
+
+}
+
+
+#message {
+    border: #313131 1px solid;
+    margin-top: 7px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    width: 328px;
+    height: 120px;
+    resize: none;
+    background-color: #ebebeb;
+}
+
+#submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: 800;
+    background-color: #d6cfcf;
+    border: #7a7a7a 2px solid;
+    padding: 15px 80px;
+    margin-top: 30px;
+
+}
+
+#submit span {
+    margin-left: 15px;
+}
+
+span.material-symbols-outlined {
+    margin-top: 10px;
+}
+
+#submit:hover {
+    animation: submitAnimation 0.3s forwards;
+}
+
+@keyframes submitAnimation {
+    0% {
+        border: 2px solid #7a7a7a;
+    }
+
+    100% {
+        border: 2px solid #f19408;
+    }
+
+}
+
+.contact_copyright {
+    margin-top: 280px;
+}
+
+
+/* swiper */
+.swiper {
+
+    width: 98%;
+    height: 240px;
+}
+
+.swiper-slide {
+    background-color: #DB9732;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.slider_lecturer {
+    width: 100%;
+}
+
+.slider_day {
+    font-size: 1.5rem;
+    margin-left: 25px;
+    margin-top: -20px;
+}
+
+@media (max-width: 450px) {
+
+
+    .slider_day {
+        margin-top: -20px;
+    }
+}
+
+.day_span {
+    font-size: 0.8rem;
+    margin-left: 2px;
+}
+
+.lecturer_wrapper {
+    display: flex;
+}
+
+.slider_text {
+    margin-top: 40px;
+    margin-left: 5%;
+    line-height: 1.6rem;
+}
+
+@media (max-width: 450px) {
+    .slider_text {
+        margin-top: 10px;
+    }
+}
+
+.slider_name {
+    line-height: 4rem;
+}
+
+
+.slide1 .lecturer_image {
+    background-image: url("../img/negishiwataru.jpg");
+    width: 150px;
+    height: 160px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 100%;
+    margin-left: 30px;
+
+}
+
+.slide2 .lecturer_image {
+    background-image: url("../img/suzukitomomi.jpg");
+    width: 150px;
+    height: 160px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 146%;
+    margin-left: 30px;
+
+}
+
+.slide3 .lecturer_image {
+    background-image: url("../img/kobayashihideo.jpg");
+    width: 150px;
+    height: 160px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 90%;
+    margin-left: 30px;
+
+}
+
+.slide4 .lecturer_image {
+    background-image: url("../img/tanakamihoko.jpg");
+    width: 150px;
+    height: 160px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 100%;
+    margin-left: 30px;
+
+}
+
+.slide5 .lecturer_image {
+    background-image: url("../img/okadatarou.jpg");
+    width: 150px;
+    height: 160px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 100%;
+    margin-left: 30px;
+
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    border: 0;
+    border-top: solid 0.2rem #b47604;
+    border-right: solid 0.2rem #b47604;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.swiper-button-next:after {
+    transform: rotate(45deg);
+
+}
+
+.swiper-button-prev::after {
+    transform: rotate(-135deg);
+
+}
+
+.slider_link {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #121312;
+    border: #f0d229 2px solid;
+    padding: 2px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #f0d229;
+    letter-spacing: 0.02rem;
+    transform-origin: right;
+}
+
+@media (max-width: 450px) {
+    .slider_link {
+        margin-top: 1px;
+        margin-right: 20px;
+
+    }
+
+
+}
+
+.slider_link:hover {
+    animation: borderAnimation 0.6s forwards;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border: 2px solid transparent;
+    }
+
+    100% {
+        border: 2px solid #b16b02;
+    }
+
+}
+
+
+/* lecturer */
+.lecturers_main {
+    background-color: #DB9732;
+
+}
+
+.lecturers_main_title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding-top: 20px;
+    color: #ebeaea;
+}
+
+.lecturers_main_title_span {
+    font-size: 1.4rem;
+    padding: 0 4px;
+}
+
+.lecturers_main_title_lecturer {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    margin-left: 2px;
+}
+
+.negishi .lecturers_image {
+    background-image: url("../img/negishiwataru.jpg");
+    width: 150px;
+    height: 160px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 90%;
+    margin-top: 30px;
+
+}
+
+.kobayashi .lecturers_image {
+    background-image: url("../img/kobayashihideo.jpg");
+    width: 150px;
+    height: 160px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 90%;
+    margin-top: 30px;
+
+}
+
+.okada .lecturers_image {
+    background-image: url("../img/okadatarou.jpg");
+    width: 150px;
+    height: 160px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 100%;
+    margin-top: 30px;
+
+}
+
+.suzuki .lecturers_image {
+    background-image: url("../img/suzukitomomi.jpg");
+    width: 150px;
+    height: 160px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 142%;
+    margin-top: 30px;
+
+}
+
+.tanaka .lecturers_image {
+    background-image: url("../img/tanakamihoko.jpg");
+    width: 150px;
+    height: 160px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 100%;
+    margin-top: 30px;
+
+}
+
+.lecturers_wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+
+}
+
+.lecturers_subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #e9e7e7;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.lecturers_name {
+    margin-top: 40px;
+}
+
+.lecturers_text {
+    color: #e9e7e7;
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+    margin-top: 40px;
+    margin-left: 30px;
+
+}
+
+.lecturers_return {
+    color: #e9e7e7;
+    margin-top: 100px;
+}
+
+.lecturers_copyright {
+    color: #805402;
+    margin-top: 220px;
+}
+
+
+
+/* タブレット */
